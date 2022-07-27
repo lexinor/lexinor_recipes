@@ -118,20 +118,9 @@ tasks:
   - action: query_database
     file: ./resources/[voice]/npwd/import.sql
 
-  - action: replace_string
-    file: ./resources/npwd/config.json
-    search: '"useResourceIntegration": false'
-    replace: '"useResourceIntegration": true'
-
-  - action: replace_string
-    file: ./resources/npwd/config.json
-    search: '"useIdentifierPrefix": false'
-    replace: '"useIdentifierPrefix": true'
-
-  - action: replace_string
-    file: ./resources/npwd/config.json
-    search: '"level": "silly"'
-    replace: '"level": "error"'
+  - action: move_path
+    src: ./tmp/recipe/npwdconfig.json
+    dest: ./resources/[voice]/npwd/config.json
 
   ## esx-npwd
   - action: download_github
