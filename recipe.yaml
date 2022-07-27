@@ -20,7 +20,7 @@ tasks:
   ## Download and prepare server.cfg, database and icon
   - action: download_github
     src: https://github.com/lexinor/lexinor_recipes
-    ref: esx
+    ref: master
     dest: ./tmp/recipe
 
   - action: move_path
