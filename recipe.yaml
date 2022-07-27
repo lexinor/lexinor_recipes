@@ -116,7 +116,7 @@ tasks:
     dest: ./resources/[voice]/
 
   - action: query_database
-    file: ./resources/npwd/import.sql
+    file: ./resources/[voice]/npwd/import.sql
 
   - action: replace_string
     file: ./resources/npwd/config.json
