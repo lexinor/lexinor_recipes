@@ -1,6 +1,6 @@
 {
     "PhoneAsItem": {
-      "enabled": true,
+      "enabled": false,
       "exportResource": "phone_export",
       "exportFunction": "canUsePhone"
     },
@@ -18,7 +18,7 @@
       "phoneNumberColumn": "phone_number"
     },
     "images": {
-      "url": "https://api.imgur.com/3/image",
+      "url": "----",
       "type": "imgur",
       "imageEncoding": "jpg",
       "contentType": "multipart/form-data",
