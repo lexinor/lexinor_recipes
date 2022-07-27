@@ -1,8 +1,8 @@
-# ox_esx_recipe
+# lexinor_recipe
 
-Recipe for deploying an ox esx server that is compatible with ox_inventory.
+Recette pour déployer un serv avec TXADMIN compatible avec ox_inventory.
 
-This recipe is currently a work in progress, please report any issues or bugs.
+C'est du work in progress
 
-Paste this link into the recipe link field while creating a new server in txadmin:
+Copier ce lien dans le champs "Recipe Link" pendant la creation d'un serveur avec txadmin :
 `https://raw.githubusercontent.com/lexinor/lexinor_recipes/master/recipe.yaml`
