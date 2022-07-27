@@ -118,6 +118,9 @@ tasks:
   - action: query_database
     file: ./resources/[voice]/npwd/import.sql
 
+  - action: remove_path
+    path: ./resources/[voice]/npwd/config.json
+
   - action: move_path
     src: ./tmp/recipe/npwdconfig.json
     dest: ./resources/[voice]/npwd/config.json
