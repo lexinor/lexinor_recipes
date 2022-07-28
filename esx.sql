@@ -13,8 +13,8 @@ CREATE TABLE `users` (
 	`inventory` LONGTEXT NULL DEFAULT NULL,
 	`job` VARCHAR(20) NULL DEFAULT 'unemployed',
 	`job_grade` INT NULL DEFAULT 0,
-	`faction` VARCHAR(20) NULL DEFAULT 'unemployed',
-	`faction_grade` INT NULL DEFAULT 0,
+	`faction` varchar(30) COLLATE utf8mb4_bin DEFAULT 'nofaction',
+	`faction_grade` int(11) DEFAULT 0;
 	`position` VARCHAR(255) NOT NULL DEFAULT '{"x":-269.4,"y":-955.3,"z":31.2,"heading":205.8}',
 	`firstname` VARCHAR(16) NULL DEFAULT NULL,
 	`lastname` VARCHAR(16) NULL DEFAULT NULL,
@@ -998,3 +998,27 @@ CREATE TABLE `user_parkings` (
 
   PRIMARY KEY (`id`)
 );
+
+
+CREATE TABLE IF NOT EXISTS `factions` (
+  `name` varchar(50) NOT NULL,
+  `label` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`name`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `factions` (`name`, `label`) VALUES ('nofaction', 'Sans Faction');
+
+CREATE TABLE IF NOT EXISTS `faction_grades` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `faction_name` varchar(50) COLLATE utf8mb4_bin DEFAULT NULL,
+  `grade` int(11) NOT NULL,
+  `name` varchar(50) COLLATE utf8mb4_bin NOT NULL,
+  `label` varchar(50) COLLATE utf8mb4_bin NOT NULL,
+  `salary` int(11) NOT NULL,
+  `skin_male` longtext COLLATE utf8mb4_bin NOT NULL,
+  `skin_female` longtext COLLATE utf8mb4_bin NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
+
+INSERT INTO `faction_grades` (`id`, `faction_name`, `grade`, `name`, `label`, `salary`, `skin_male`, `skin_female`) VALUES (1, 'nofaction', 0, 'nofaction', 'Sans faction', 0, '{}', '{}');
+
