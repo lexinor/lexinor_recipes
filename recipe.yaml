@@ -192,7 +192,7 @@ tasks:
     path: ./tmp/PolyZone.zip
   - action: unzip
     src: ./tmp/PolyZone.zip
-    dest: ./resources/[libraries]/Polyzone
+    dest: ./resources/[libraries]/PolyZone
 
   ## MenuV
   - action: download_github
