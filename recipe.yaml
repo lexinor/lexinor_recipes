@@ -59,15 +59,15 @@ tasks:
   - action: remove_path
     path: ./resources/[esx]/esx_multicharacter
     
-  - action: download_github
-    src: https://github.com/thelindat/esx_multicharacter
-    ref: master
-    dest: ./resources/[esx_addons]/esx_multicharacter
-
-  - action: replace_string
-    file: ./resources/[esx]/es_extended/config.lua
-    search: 'Config.Multichar                = false'
-    replace: 'Config.Multichar                = true'
+  ##- action: download_github
+  ##  src: https://github.com/thelindat/esx_multicharacter
+  ##  ref: master
+  ##  dest: ./resources/[esx_addons]/esx_multicharacter
+##
+  ##- action: replace_string
+  ##  file: ./resources/[esx]/es_extended/config.lua
+  ##  search: 'Config.Multichar                = false'
+  ##  replace: 'Config.Multichar                = true'
 
   ## ox_lib
   - action: download_file
