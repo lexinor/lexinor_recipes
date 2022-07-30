@@ -5,12 +5,14 @@
       "exportFunction": "canUsePhone"
     },
     "general": {
-      "useResourceIntegration": true,
+      "useResourceIntegration": false,
       "toggleKey": "f1",
-      "toggleCommand": "phone"
+      "toggleCommand": "phone",
+      "defaultLanguage": "fr",
+      "showId": false
     },
     "database": {
-      "useIdentifierPrefix": true,
+      "useIdentifierPrefix": false,
       "playerTable": "users",
       "identifierColumn": "identifier",
       "identifierType": "",
