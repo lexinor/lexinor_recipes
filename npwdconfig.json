@@ -5,7 +5,7 @@
       "exportFunction": "canUsePhone"
     },
     "general": {
-      "useResourceIntegration": false,
+      "useResourceIntegration": true,
       "toggleKey": "f1",
       "toggleCommand": "phone",
       "defaultLanguage": "fr",
@@ -20,7 +20,7 @@
       "phoneNumberColumn": "phone_number"
     },
     "images": {
-      "url": "----",
+      "url": "",
       "type": "imgur",
       "imageEncoding": "jpg",
       "contentType": "multipart/form-data",
