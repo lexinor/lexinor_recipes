@@ -113,17 +113,17 @@ tasks:
     path: ./tmp/npwd.zip
   - action: unzip
     src: ./tmp/npwd.zip
-    dest: ./resources/[voice]/
+    dest: ./resources/
 
   - action: query_database
-    file: ./resources/[voice]/npwd/import.sql
+    file: ./resources/npwd/import.sql
 
   - action: remove_path
-    path: ./resources/[voice]/npwd/config.json
+    path: ./resources/npwd/config.json
 
   - action: move_path
     src: ./tmp/recipe/npwdconfig.json
-    dest: ./resources/[voice]/npwd/config.json
+    dest: ./resources/npwd/config.json
 
   ## esx-npwd
   - action: download_github

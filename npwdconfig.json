@@ -12,7 +12,7 @@
       "showId": false
     },
     "database": {
-      "useIdentifierPrefix": false,
+      "useIdentifierPrefix": true,
       "playerTable": "users",
       "identifierColumn": "identifier",
       "identifierType": "",
