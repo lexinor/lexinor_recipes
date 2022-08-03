@@ -109,7 +109,7 @@ tasks:
 
   - action: download_github
     src: https://github.com/lexinor/fivem-appearance
-    ref: master
+    ref: main
     dest: ./resources/[ox]/fivem-appearance
 
   ## npwd
