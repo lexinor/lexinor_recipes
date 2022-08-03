@@ -94,18 +94,23 @@ tasks:
     dest: ./resources
 
   ## fivem-appearance
-  - action: download_file
-    url: https://github.com/thelindat/fivem-appearance/releases/latest/download/fivem-appearance.zip
-    path: ./tmp/fivem-appearance.zip
-  - action: unzip
-    src: ./tmp/fivem-appearance.zip
-    dest: ./resources/[ox]/
+  ##- action: download_file
+  ##  url: https://github.com/thelindat/fivem-appearance/releases/latest/download/fivem-appearance.zip
+  ##  path: ./tmp/fivem-appearance.zip
+  ##- action: unzip
+  ##  src: ./tmp/fivem-appearance.zip
+  ##  dest: ./resources/[ox]/
 
   ## ox_appearance
+  ##- action: download_github
+  ##  src: https://github.com/overextended/ox_appearance
+  ##  ref: main
+  ##  dest: ./resources/[ox]/ox_appearance
+
   - action: download_github
-    src: https://github.com/overextended/ox_appearance
-    ref: main
-    dest: ./resources/[ox]/ox_appearance
+    src: https://github.com/lexinor/fivem-appearance
+    ref: master
+    dest: ./resources/[ox]/fivem-appearance
 
   ## npwd
   - action: download_file
