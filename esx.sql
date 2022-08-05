@@ -15,7 +15,7 @@ CREATE TABLE `users` (
 	`job_grade` INT NULL DEFAULT 0,
 	`faction` varchar(30) COLLATE utf8mb4_bin DEFAULT 'nofaction',
 	`faction_grade` int(11) DEFAULT 0,
-	`position` VARCHAR(255) NOT NULL DEFAULT '{"x":-269.4,"y":-955.3,"z":31.2,"heading":205.8}',
+	`position` VARCHAR(255) NOT NULL DEFAULT '{"x":-1042.9266,"y":-2746.4329,"z":21.3594,"heading":326.3846}',
 	`firstname` VARCHAR(16) NULL DEFAULT NULL,
 	`lastname` VARCHAR(16) NULL DEFAULT NULL,
 	`dateofbirth` VARCHAR(10) NULL DEFAULT NULL,
