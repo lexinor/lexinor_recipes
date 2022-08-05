@@ -2,9 +2,9 @@ $engine: 3
 $minFxVersion: 5104
 $onesync: on
 name: ox_esx_recipe
-version: 1.5.0
-author: DokaDoka
-description: Overextended ESX compatible with ox_inventory
+version: 1.6.0
+author: Lexinor
+description: Fork of ox_receipe Overextended ESX compatible with ox_inventory
 
 tasks:
   ## Download default CFX resources
@@ -112,6 +112,9 @@ tasks:
     ref: main
     dest: ./resources/[ox]/fivem-appearance
 
+  - action: query_database
+    file: ./resources/[ox]/fivem-appearance/outfits.sql
+
   ## npwd
   - action: download_file
     url: https://github.com/project-error/npwd/releases/latest/download/npwd.zip
@@ -218,6 +221,8 @@ tasks:
     path: ./tmp
   - action: remove_path
     path: ./resources/[esx]/esx_skin
+  - action: remove_path
+    path: ./resources/[esx]/skinchanger
   - action: remove_path
     path: ./resources/[esx_addons]/esx_accessories
   - action: remove_path
