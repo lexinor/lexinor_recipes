@@ -190,7 +190,7 @@ tasks:
   ## bulletin
   - action: download_github
     src: https://github.com/lexinor/bulletin
-    ref: master
+    ref: main
     dest: ./resources/[libraries]/bulletin
 
   ## rprogress
