@@ -200,13 +200,32 @@ tasks:
     path: ./tmp/PolyZone.zip
   - action: unzip
     src: ./tmp/PolyZone.zip
-    dest: ./resources/[libraries]/PolyZone
+    dest: ./resources/[libraries]/PolyZone    
 
   ## MenuV
   - action: download_github
     src: https://github.com/ThymonA/menuv
     ref: master
     dest: ./resources/[libraries]/menuv
+
+  ## xsound
+  - action: download_github
+    src: https://github.com/lexinor/xsound
+    ref: master
+    dest: ./resources/[libraries]/xsound
+
+  ## bulletin
+  - action: download_github
+    src: https://github.com/lexinor/bulletin
+    ref: master
+    dest: ./resources/[libraries]/bulletin
+
+  ## rprogress
+  - action: download_github
+    src: https://github.com/lexinor/rprogress
+    ref: master
+    dest: ./resources/[libraries]/rprogress
+    
 
   ## lexinor_dpemotes
   - action: download_github
