@@ -1,5 +1,7 @@
 # lexinor_recipe
 
+## FRENCH
+
 Recette pour déployer un serv avec TXADMIN compatible avec ox_inventory.
 
 C'est du work in progress
