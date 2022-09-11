@@ -112,6 +112,16 @@ tasks:
     ref: main
     dest: ./resources/[voice]/esx-npwd
 
+  ## pefcl
+  - action: download_file
+    url: https://github.com/project-error/pefcl/releases/latest/download/pefcl.zip
+    path: ./tmp/pefcl.zip
+  - action: unzip
+    src: ./tmp/pefcl.zip
+    dest: ./resources/
+  - action: query_database
+    file: ./resources/pefcl/import.sql
+
   ## pma-voice
   - action: download_github
     src: https://github.com/AvarianKnight/pma-voice
@@ -152,6 +162,12 @@ tasks:
     src: https://github.com/overextended/qtarget
     ref: main
     dest: ./resources/[ox]/qtarget
+
+  ## ox_target
+  - action: download_github
+    src: https://github.com/overextended/ox_target
+    ref: main
+    dest: ./resources/[ox]/ox_target
 
   ## ox_fuel
   - action: download_github
