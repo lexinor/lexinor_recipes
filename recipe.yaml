@@ -224,6 +224,12 @@ tasks:
   - action: query_database
     file: /resources/[general_scripts]/lexinor_dpemotes/dpkeybinds.sql
 
+  ## supv_core
+  - action: download_github
+    src: https://github.com/lexinor/supv_core
+    ref: main
+    dest: ./resources/[libraries]/supv_core
+
   ## cleanup
   - action: remove_path
     path: ./tmp
