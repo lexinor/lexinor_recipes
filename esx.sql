@@ -225,12 +225,12 @@ INSERT INTO `addon_inventory` (name, label, shared) VALUES
 ;
 
 CREATE TABLE `addon_inventory_items` (
-	`id` INT NOT NULL AUTO_INCREMENT,
-	`inventory_name` VARCHAR(100) NOT NULL,
-	`name` VARCHAR(100) NOT NULL,
-	`count` INT NOT NULL,
-	`owner` VARCHAR(60) DEFAULT NULL,
-
+  `id` int(11) NOT NULL,
+  `inventory_name` varchar(100) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `count` int(11) NOT NULL,
+  `owner` varchar(60) DEFAULT NULL
+  
 	PRIMARY KEY (`id`),
 	INDEX `index_addon_inventory_items_inventory_name_name` (`inventory_name`, `name`),
 	INDEX `index_addon_inventory_items_inventory_name_name_owner` (`inventory_name`, `name`, `owner`),
