@@ -122,6 +122,19 @@ tasks:
   - action: query_database
     file: ./resources/pefcl/import.sql
 
+  - action: remove_path
+    path: ./resources/pefcl/config.json
+
+  - action: move_path
+    src: ./tmp/recipe/pefclconfig.json
+    dest: ./resources/pefcl/config.json
+
+  ## pefcl-esx
+  - action: download_github
+    src: https://github.com/project-error/pefcl-esx
+    ref: main
+    dest: ./resources/[voice]/pefcl-esx
+
   ## pma-voice
   - action: download_github
     src: https://github.com/AvarianKnight/pma-voice
