@@ -9,8 +9,7 @@
       "toggleKey": "f1",
       "toggleCommand": "phone",
       "defaultLanguage": "fr",
-      "showId": false,
-      "currency": "USD"
+      "showId": false
     },
     "database": {
       "useIdentifierPrefix": true,
