@@ -2,7 +2,7 @@ $engine: 3
 $minFxVersion: 5104
 $onesync: on
 name: ox_esx_recipe
-version: 1.6.0
+version: 1.7.0
 author: Lexinor
 description: Fork of ox_receipe Overextended ESX compatible with ox_inventory
 
@@ -131,9 +131,9 @@ tasks:
 
   ## pefcl-esx
   - action: download_github
-    src: https://github.com/project-error/pefcl-esx
+    src: https://github.com/lexinor/pefcl-esx
     ref: main
-    dest: ./resources/[voice]/pefcl-esx
+    dest: ./resources/pefcl-esx
 
   ## pma-voice
   - action: download_github
