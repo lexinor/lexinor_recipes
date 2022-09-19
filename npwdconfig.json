@@ -19,7 +19,7 @@
       "profileQueries": true,
       "phoneNumberColumn": "phone_number"
     },
-    "images": { // => https://projecterror.dev/docs/npwd/start/installation#feature-related-setup
+    "images": { 
       "url": "",
       "type": "imgur",
       "imageEncoding": "jpg",
