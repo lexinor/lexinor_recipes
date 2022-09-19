@@ -52,9 +52,7 @@ tasks:
     subpath: "[esx_addons]"
     dest: ./resources/[esx_addons]
 
-    ## cleanup
-  - action: remove_path
-    path: ./tmp
+  ## cleanup not used ESX
   - action: remove_path
     path: ./resources/[esx]/esx_skin
   - action: remove_path
@@ -257,8 +255,7 @@ tasks:
   - action: download_github
     src: https://github.com/lexinor/rprogress
     ref: master
-    dest: ./resources/[libraries]/rprogress
-    
+    dest: ./resources/[libraries]/rprogress    
 
   ## lexinor_dpemotes
   - action: download_github
@@ -273,3 +270,7 @@ tasks:
     src: https://github.com/lexinor/supv_core
     ref: main
     dest: ./resources/[libraries]/supv_core
+
+  ## Final removals
+  - action: remove_path
+    path: ./tmp
