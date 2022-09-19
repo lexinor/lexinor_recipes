@@ -1,10 +1,10 @@
 $engine: 3
 $minFxVersion: 5104
 $onesync: on
-name: ox_esx_recipe
-version: 1.7.0
+name: lexinor_recipe
+version: 1.8.0
 author: Lexinor
-description: Fork of ox_receipe Overextended ESX compatible with ox_inventory
+description: Fork of ox_recipe Overextended
 
 tasks:
   ## Download default CFX resources
@@ -83,8 +83,12 @@ tasks:
     path: ./resources/[esx_addons]/esx_multicharacter
   - action: remove_path
     path: ./resources/[esx]/esx_multicharacter
-    - action: remove_path
+  - action: remove_path
     path: ./resources/[esx_addons]/esx_banking
+  - action: remove_path
+    path: ./resources/[esx_addons]/esx_drugs
+  - action: remove_path
+    path: ./resources/[esx_addons]/esx_holdup
 
   ## ox_lib
   - action: download_file
