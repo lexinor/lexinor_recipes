@@ -41,6 +41,9 @@
         "discordapp.com",
         "wikipedia.org"
       ]
+    },"profanityFilter": {
+      "enabled": false,
+      "badWords": ["esx"]
     },
     "twitter": {
       "showNotifications": true,
@@ -48,6 +51,7 @@
       "allowEditableProfileName": true,
       "allowDeleteTweets": true,
       "allowReportTweets": true,
+      "allowRetweet": true,
       "characterLimit": 160,
       "newLineLimit": 10,
       "enableAvatars": true,
