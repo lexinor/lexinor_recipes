@@ -22,11 +22,11 @@ tasks:
     src: https://github.com/lexinor/lexinor_recipes
     ref: master
     dest: ./tmp/recipe
-    
-   - action: move_path
-    src: ./tmp/recipe/inventory.cfg
-    dest: ./inventory.cfg
 
+  - action: move_path
+    src: ./tmp/recipe/server.cfg
+    dest: ./server.cfg
+  
   - action: move_path
     src: ./tmp/recipe/server.cfg
     dest: ./server.cfg
