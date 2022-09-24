@@ -180,6 +180,12 @@ tasks:
     ref: master
     dest: ./resources/[voice]/rp-radio
 
+  ## ac_radio
+  - action: download_github
+    src: https://github.com/lexinor/ac_radio
+    ref: master
+    dest: ./resources/[voice]/ac_radio
+
   ## screenshot-basic
   - action: download_github
     src: https://github.com/citizenfx/screenshot-basic
@@ -268,6 +274,12 @@ tasks:
     dest: ./resources/[general_scripts]/lexinor_dpemotes
   - action: query_database
     file: /resources/[general_scripts]/lexinor_dpemotes/dpkeybinds.sql
+
+  ## rprogress
+  - action: download_github
+    src: https://github.com/lexinor/skill-bar
+    ref: master
+    dest: ./resources/[libraries]/skill-bar 
 
   ## supv_core
   - action: download_github
