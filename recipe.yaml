@@ -20,7 +20,7 @@ tasks:
   ## Download and prepare server.cfg, database and icon
   - action: download_github
     src: https://github.com/lexinor/lexinor_recipes
-    ref: master
+    ref: develop
     dest: ./tmp/recipe
 
   - action: move_path
@@ -121,7 +121,7 @@ tasks:
     dest: ./resources
 
   - action: move_path
-    src: ./tmp/ox_inventory_data/items.lua
+    src: ./tmp/recipe/ox_inventory_data/items.lua
     dest: ./resources/ox_inventory/data/items.lua
 
   ## fivem-appearance
