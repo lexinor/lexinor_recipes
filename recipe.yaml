@@ -120,6 +120,9 @@ tasks:
     src: ./tmp/ox_inventory.zip
     dest: ./resources
 
+  - action: remove_path
+    path: ./resources/ox_inventory/data/items.lua
+
   - action: move_path
     src: ./tmp/recipe/ox_inventory_data/items.lua
     dest: ./resources/ox_inventory/data/items.lua
