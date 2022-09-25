@@ -119,6 +119,11 @@ tasks:
   - action: unzip
     src: ./tmp/ox_inventory.zip
     dest: ./resources
+
+  - action: move_path
+    src: ./tmp/ox_inventory_data/items.lua
+    dest: ./resources/ox_inventory/data/items.lua
+
   ## fivem-appearance
   - action: download_github
     src: https://github.com/lexinor/fivem-appearance
