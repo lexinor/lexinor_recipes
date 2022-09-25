@@ -290,7 +290,7 @@ tasks:
   ## rprogress
   - action: download_github
     src: https://github.com/lexinor/skill-bar
-    ref: master
+    ref: main
     dest: ./resources/[libraries]/skill-bar 
 
   ## supv_core
