@@ -13,7 +13,7 @@
     "profileQueries": true
   },
   "prices": {
-    "newAccount": 1000
+    "newAccount": 5000
   },
   "cash": {
     "startAmount": 2000
@@ -22,16 +22,16 @@
     "firstAccountStartBalance": 2500,
     "otherAccountStartBalance": 500,
     "clearingNumber": 920,
-    "maximumNumberOfAccounts": 3
+    "maximumNumberOfAccounts": 1
   },
   "atms": {
     "distance": 5.0,
     "props": [-870868698, -1126237515, 506770882],
-    "withdrawOptions": [500, 1000, 1500, 3000, 5000, 7500]
+    "withdrawOptions": [50, 100, 150, 300, 500, 1000, 2500]
   },
   "bankBlips": {
     "enabled": true,
-    "name": "Bank",
+    "name": "Banque",
     "colour": 2,
     "icon": 108,
     "scale": 0.55,
@@ -189,7 +189,7 @@
   },
   "atmBlips": {
     "enabled": false,
-    "name": "ATM",
+    "name": "DAB",
     "colour": 39,
     "icon": 108,
     "scale": 0.35,

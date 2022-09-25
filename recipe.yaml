@@ -91,6 +91,10 @@ tasks:
     path: ./resources/[esx_addons]/esx_drugs
   - action: remove_path
     path: ./resources/[esx_addons]/esx_holdup
+  - action: remove_path
+    path: ./resources/[esx]/esx_loadingscreen
+  - action: remove_path
+    path: ./resources/[esx_addons]/esx_allowlist
 
   ## ox_lib
   - action: download_file
