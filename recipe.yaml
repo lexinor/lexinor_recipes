@@ -1,10 +1,10 @@
 $engine: 3
 $minFxVersion: 5104
 $onesync: on
-name: lexinor_recipe
+name: newdawn_recipe
 version: 1.8.0
 author: Lexinor
-description: Fork of ox_recipe Overextended
+description: New Dawn RP
 
 tasks:
   ## Download default CFX resources
