@@ -26,7 +26,7 @@ CREATE TABLE `users` (
 	`status` LONGTEXT NULL,
 	`is_dead` TINYINT(1) NULL DEFAULT '0',
 	`phone_number` VARCHAR(20) DEFAULT NULL,		
-	`id` int(11) NOT NULL,
+	`id` int(11)  NOT NULL AUTO_INCREMENT,
 	`disabled` TINYINT(1) NULL DEFAULT '0',
 	`last_property` varchar(255) DEFAULT NULL,
 	`created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
@@ -948,8 +948,3 @@ CREATE TABLE IF NOT EXISTS `faction_grades` (
 ) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 INSERT INTO `faction_grades` (`id`, `faction_name`, `grade`, `name`, `label`, `salary`, `skin_male`, `skin_female`) VALUES (1, 'nofaction', 0, 'nofaction', 'Sans faction', 0, '{}', '{}');
-
-
-ALTER TABLE `users`
-  ADD UNIQUE KEY `id` (`id`);
-
