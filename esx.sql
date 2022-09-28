@@ -33,7 +33,7 @@ CREATE TABLE `users` (
 	`last_seen` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
 	`last_connection` varchar(20) DEFAULT NULL,
 
-	PRIMARY KEY (`identifier`)
+	PRIMARY KEY (`identifier`),
 	INDEX (`id`)
 );
 
