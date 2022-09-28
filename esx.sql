@@ -25,8 +25,8 @@ CREATE TABLE `users` (
 	`skin` LONGTEXT NULL DEFAULT NULL,
 	`status` LONGTEXT NULL,
 	`is_dead` TINYINT(1) NULL DEFAULT '0',
-	`phone_number` VARCHAR(20) DEFAULT NULL,		
-	`id` int(11)  NOT NULL AUTO_INCREMENT,
+	`phone_number` VARCHAR(20) DEFAULT NULL,
+	`id` int(11) NOT NULL AUTO_INCREMENT,
 	`disabled` TINYINT(1) NULL DEFAULT '0',
 	`last_property` varchar(255) DEFAULT NULL,
 	`created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
@@ -34,6 +34,7 @@ CREATE TABLE `users` (
 	`last_connection` varchar(20) DEFAULT NULL,
 
 	PRIMARY KEY (`identifier`)
+	INDEX (`id`)
 );
 
 CREATE TABLE `items` (
