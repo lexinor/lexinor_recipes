@@ -256,9 +256,11 @@ tasks:
     dest: ./resources/[libraries]/PolyZone    
 
   ## MenuV
-  - action: download_github
-    src: https://github.com/ThymonA/menuv
-    ref: master
+  - action: download_file
+    url: https://github.com/lexinor/menuv/releases/latest/download/menuv.zip
+    path: ./tmp/menuv.zip
+  - action: unzip
+    src: ./tmp/menuv.zip
     dest: ./resources/[libraries]/menuv
 
   ## xsound
