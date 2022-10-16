@@ -186,12 +186,6 @@ tasks:
     ref: main
     dest: ./resources/[voice]/pma-voice
 
-  ## rp-radio
-  - action: download_github
-    src: https://github.com/lexinor/rp-radio
-    ref: master
-    dest: ./resources/[voice]/rp-radio
-
   ## ac_radio
   - action: download_github
     src: https://github.com/lexinor/ac_radio
@@ -220,12 +214,6 @@ tasks:
     src: https://github.com/lexinor/bob74_ipl
     ref: master
     dest: ./resources/[maps]/bob74_ipl
-
-  ## qtarget
-  - action: download_github
-    src: https://github.com/overextended/qtarget
-    ref: main
-    dest: ./resources/[ox]/qtarget
 
   ## ox_target
   - action: download_github
@@ -273,6 +261,10 @@ tasks:
   - action: download_github
     src: https://github.com/lexinor/bulletin
     ref: main
+    dest: ./tmp/bulletin
+
+  - action: copy_path
+    src: ./tmp/bulletin/bulletin
     dest: ./resources/[libraries]/bulletin
 
   ## rprogress
