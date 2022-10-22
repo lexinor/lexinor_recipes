@@ -235,8 +235,13 @@ tasks:
   - action: download_file
     url: https://github.com/overextended/ox_doorlock/releases/latest/download/ox_doorlock.zip
     path: ./tmp/ox_doorlock.zip
+
   - action: unzip
     src: ./tmp/ox_doorlock.zip
+    dest: ./tmp/ox_doorlock
+
+  - action: move_path
+    src: ./tmp/ox_doorlock/ox_doorlock
     dest: ./resources/[ox]/ox_doorlock
 
   ## PolyZone
