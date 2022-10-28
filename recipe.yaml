@@ -266,6 +266,12 @@ tasks:
     ref: master
     dest: ./resources/[libraries]/xsound
 
+  ## interact-sound
+  - action: download_github
+    src: https://github.com/lexinor/interact-sound
+    ref: master
+    dest: ./resources/[libraries]/interact-sound
+
   ## bulletin
   - action: download_github
     src: https://github.com/lexinor/bulletin
