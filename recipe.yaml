@@ -1,10 +1,10 @@
 $engine: 3
 $minFxVersion: 5104
 $onesync: on
-name: lexinor_recipe
+name: newdawn_recipe
 version: 1.8.0
 author: Lexinor
-description: Fork of ox_recipe Overextended
+description: New Dawn RP
 
 tasks:
   ## Download default CFX resources
@@ -20,12 +20,16 @@ tasks:
   ## Download and prepare server.cfg, database and icon
   - action: download_github
     src: https://github.com/lexinor/lexinor_recipes
-    ref: master
+    ref: develop
     dest: ./tmp/recipe
 
   - action: move_path
     src: ./tmp/recipe/inventory.cfg
     dest: ./inventory.cfg
+
+    - action: move_path
+    src: ./tmp/recipe/ox_target.cfg
+    dest: ./ox_target.cfg
   
   - action: move_path
     src: ./tmp/recipe/server.cfg
@@ -119,6 +123,14 @@ tasks:
   - action: unzip
     src: ./tmp/ox_inventory.zip
     dest: ./resources
+
+  - action: remove_path
+    path: ./resources/ox_inventory/data/items.lua
+
+  - action: move_path
+    src: ./tmp/recipe/ox_inventory_data/items.lua
+    dest: ./resources/ox_inventory/data/items.lua
+
   ## fivem-appearance
   - action: download_github
     src: https://github.com/lexinor/fivem-appearance
@@ -178,12 +190,6 @@ tasks:
     ref: main
     dest: ./resources/[voice]/pma-voice
 
-  ## rp-radio
-  - action: download_github
-    src: https://github.com/lexinor/rp-radio
-    ref: master
-    dest: ./resources/[voice]/rp-radio
-
   ## ac_radio
   - action: download_github
     src: https://github.com/lexinor/ac_radio
@@ -213,12 +219,6 @@ tasks:
     ref: master
     dest: ./resources/[maps]/bob74_ipl
 
-  ## qtarget
-  - action: download_github
-    src: https://github.com/overextended/qtarget
-    ref: main
-    dest: ./resources/[ox]/qtarget
-
   ## ox_target
   - action: download_github
     src: https://github.com/overextended/ox_target
@@ -235,8 +235,13 @@ tasks:
   - action: download_file
     url: https://github.com/overextended/ox_doorlock/releases/latest/download/ox_doorlock.zip
     path: ./tmp/ox_doorlock.zip
+
   - action: unzip
     src: ./tmp/ox_doorlock.zip
+    dest: ./tmp/ox_doorlock
+
+  - action: move_path
+    src: ./tmp/ox_doorlock/ox_doorlock
     dest: ./resources/[ox]/ox_doorlock
 
   ## PolyZone
@@ -248,9 +253,11 @@ tasks:
     dest: ./resources/[libraries]/PolyZone    
 
   ## MenuV
-  - action: download_github
-    src: https://github.com/ThymonA/menuv
-    ref: master
+  - action: download_file
+    url: https://github.com/lexinor/menuv/releases/latest/download/menuv.zip
+    path: ./tmp/menuv.zip
+  - action: unzip
+    src: ./tmp/menuv.zip
     dest: ./resources/[libraries]/menuv
 
   ## xsound
@@ -259,10 +266,20 @@ tasks:
     ref: master
     dest: ./resources/[libraries]/xsound
 
+  ## interact-sound
+  - action: download_github
+    src: https://github.com/lexinor/interact-sound
+    ref: master
+    dest: ./resources/[libraries]/interact-sound
+
   ## bulletin
   - action: download_github
     src: https://github.com/lexinor/bulletin
     ref: main
+    dest: ./tmp/bulletin
+
+  - action: copy_path
+    src: ./tmp/bulletin/bulletin
     dest: ./resources/[libraries]/bulletin
 
   ## rprogress
@@ -279,7 +296,7 @@ tasks:
   - action: query_database
     file: /resources/[general_scripts]/lexinor_dpemotes/dpkeybinds.sql
 
-  ## rprogress
+  ## skill-bar
   - action: download_github
     src: https://github.com/lexinor/skill-bar
     ref: main
