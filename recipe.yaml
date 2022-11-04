@@ -2,7 +2,7 @@ $engine: 3
 $minFxVersion: 5104
 $onesync: on
 name: newdawn_recipe
-version: 1.8.0
+version: 0.5.0
 author: Lexinor
 description: New Dawn RP
 
@@ -27,7 +27,7 @@ tasks:
     src: ./tmp/recipe/inventory.cfg
     dest: ./inventory.cfg
 
-    - action: move_path
+  - action: move_path
     src: ./tmp/recipe/ox_target.cfg
     dest: ./ox_target.cfg
   
