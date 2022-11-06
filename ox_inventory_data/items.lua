@@ -85,7 +85,7 @@ return {
 
 	['paperbag'] = {
 		label = 'Paper Bag',
-		weight = 1,
+		weight = 500,
 		stack = false,
 		close = false,
 		consume = 0
@@ -188,5 +188,196 @@ return {
 	['clothing'] = {
 		label = 'Clothing',
 		consume = 0,
+	},
+
+	['clothing'] = {
+		label = 'Clothing',
+		consume = 0,
+	},
+
+	['ammonium_nitrate'] = {
+		label = 'ammonium nitrate',
+		weight = 500,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['cannabis'] = {
+		label = 'cannabis',
+		weight = 500,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['carbon'] = {
+		label = 'carbon',
+		weight = 500,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['cocaine'] = {
+		label = 'cocaine',
+		weight = 500,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['codeine'] = {
+		label = 'codeine',
+		weight = 500,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['drink_sprite'] = {
+		label = 'sprite',
+		weight = 10,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['drug_ecstasy'] = {
+		label = 'ecstasy',
+		weight = 10,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['drug_lean'] = {
+		label = 'lean',
+		weight = 10,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['drug_lsd'] = {
+		label = 'lsd',
+		weight = 10,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['drug_meth'] = {
+		label = 'meth',
+		weight = 500,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['green_gelato_cannabis'] = {
+		label = 'green gelato cannabis',
+		weight = 500,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['hydrogen'] = {
+		label = 'hydrogen',
+		weight = 500,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['ice'] = {
+		label = 'ice',
+		weight = 500,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['jolly_ranchers'] = {
+		label = 'jolly ranchers',
+		weight = 500,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['liquid_sulfur'] = {
+		label = 'liquid sulfur',
+		weight = 500,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['muriatic_acid'] = {
+		label = 'muriatic acid',
+		weight = 500,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['nitrogen'] = {
+		label = 'nitrogen',
+		weight = 500,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['opium'] = {
+		label = 'opium',
+		weight = 500,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['oxygen'] = {
+		label = 'oxygen',
+		weight = 500,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['pseudoefedrine'] = {
+		label = 'pseudoefedrine',
+		weight = 500,
+		stack = true,
+		close = true,
+		description = nil
+	},weight = 500,
+
+	['red_sulfur'] = {
+		label = 'red sulfur',
+		weight = 500,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['sodium_hydroxide'] = {
+		label = 'sodium hydroxide',
+		weight = 500,
+		stack = true,
+		close = true,
+		description = nil
+	},
+
+	['serflex'] = {
+		label = 'Serflex',
+		weight = 500,
+	},
+
+	['rope'] = {
+		label = 'Corde',
+		weight = 500,
 	},
 }
