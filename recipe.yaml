@@ -308,9 +308,14 @@ tasks:
     dest: ./resources/[libraries]/utk_render
 
   - action: download_github
-    src: https://github.com/lexinor/cd_easytime.git
+    src: https://github.com/lexinor/cd_easytime
     ref: main
     dest: ./resources/[general_scripts]/cd_easytime
+
+  - action: download_github
+    src: https://github.com/lexinor/animviewer
+    ref: master
+    dest: ./resources/[dev]/animviewer
 
   ## Final removals
   - action: remove_path
