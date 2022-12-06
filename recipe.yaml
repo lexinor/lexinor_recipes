@@ -133,7 +133,7 @@ tasks:
     path: ./resources/ox_inventory/data/items.lua
 
   - action: download_file
-    url: https://github.com/NewDawn-RP/ox_inventory/blob/main/data/items.lua
+    url: https://raw.githubusercontent.com/NewDawn-RP/ox_inventory/main/data/items.lua
     path: ./resources/ox_inventory/data/items.lua
 
   ## fivem-appearance
