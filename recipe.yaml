@@ -326,6 +326,21 @@ tasks:
     ref: master
     dest: ./resources/[dev]/animviewer
 
+  - action: download_github
+    src: https://github.com/lexinor/wasabi_mining
+    ref: main
+    dest: ./resources/[jobs]/wasabi_mining
+
+  - action: download_github
+    src: https://github.com/lexinor/wasabi_fishing
+    ref: main
+    dest: ./resources/[jobs]/wasabi_fishing
+
+  - action: download_github
+    src: https://github.com/lexinor/jsfour-idcard
+    ref: master
+    dest: ./resources/[general_scripts]/jsfour-idcard
+
   ## Final removals
   - action: remove_path
     path: ./tmp
