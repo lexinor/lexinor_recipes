@@ -89,8 +89,8 @@ tasks:
     path: ./resources/[esx_addons]/esx_multicharacter
   - action: remove_path
     path: ./resources/[esx]/esx_multicharacter
-  - action: remove_path
-    path: ./resources/[esx_addons]/esx_banking
+  # - action: remove_path
+  #   path: ./resources/[esx_addons]/esx_banking
   - action: remove_path
     path: ./resources/[esx_addons]/esx_drugs
   - action: remove_path
@@ -162,27 +162,27 @@ tasks:
     dest: ./resources/[voice]/esx-npwd
 
   ## pefcl
-  - action: download_file
-    ##url: https://github.com/project-error/pefcl/releases/latest/download/pefcl.zip
-    url: https://github.com/lexinor/pefcl/releases/download/unstable-main/pefcl-pre-6c9aa49.zip
-    path: ./tmp/pefcl.zip
+  # - action: download_file
+  #   ##url: https://github.com/project-error/pefcl/releases/latest/download/pefcl.zip
+  #   url: https://github.com/lexinor/pefcl/releases/download/unstable-main/pefcl-pre-6c9aa49.zip
+  #   path: ./tmp/pefcl.zip
 
-  - action: unzip
-    src: ./tmp/pefcl.zip
-    dest: ./resources/
-  - action: query_database
-    file: ./resources/pefcl/import.sql
+  # - action: unzip
+  #   src: ./tmp/pefcl.zip
+  #   dest: ./resources/
+  # - action: query_database
+  #   file: ./resources/pefcl/import.sql
 
-  - action: move_path
-    src: ./tmp/recipe/pefclconfig.json
-    dest: ./resources/pefcl/config.json
-    overwrite: true
+  # - action: move_path
+  #   src: ./tmp/recipe/pefclconfig.json
+  #   dest: ./resources/pefcl/config.json
+  #   overwrite: true
 
-  ## pefcl-esx
-  - action: download_github
-    src: https://github.com/lexinor/pefcl-esx
-    ref: main
-    dest: ./resources/pefcl-esx
+  # ## pefcl-esx
+  # - action: download_github
+  #   src: https://github.com/lexinor/pefcl-esx
+  #   ref: main
+  #   dest: ./resources/pefcl-esx
 
   ## pma-voice
   - action: download_github
@@ -244,21 +244,21 @@ tasks:
     src: ./tmp/ox_doorlock/ox_doorlock
     dest: ./resources/[ox]/ox_doorlock
 
-  ## PolyZone
-  - action: download_file
-    url: https://github.com/mkafrin/PolyZone/releases/latest/download/PolyZone.zip
-    path: ./tmp/PolyZone.zip
-  - action: unzip
-    src: ./tmp/PolyZone.zip
-    dest: ./resources/[libraries]/PolyZone    
+  # ## PolyZone
+  # - action: download_file
+  #   url: https://github.com/mkafrin/PolyZone/releases/latest/download/PolyZone.zip
+  #   path: ./tmp/PolyZone.zip
+  # - action: unzip
+  #   src: ./tmp/PolyZone.zip
+  #   dest: ./resources/[libraries]/PolyZone    
 
-  ## MenuV
-  - action: download_file
-    url: https://github.com/lexinor/menuv/releases/latest/download/menuv.zip
-    path: ./tmp/menuv.zip
-  - action: unzip
-    src: ./tmp/menuv.zip
-    dest: ./resources/[libraries]/menuv
+  # ## MenuV
+  # - action: download_file
+  #   url: https://github.com/lexinor/menuv/releases/latest/download/menuv.zip
+  #   path: ./tmp/menuv.zip
+  # - action: unzip
+  #   src: ./tmp/menuv.zip
+  #   dest: ./resources/[libraries]/menuv
 
   ## xsound
   - action: download_github
@@ -296,6 +296,12 @@ tasks:
   - action: query_database
     file: /resources/[general_scripts]/lexinor_dpemotes/dpkeybinds.sql
 
+  ## sublime_administration
+  - action: download_github
+    src: https://github.com/lexinor/sublime_administration
+    ref: main
+    dest: ./resources/[admin]/sublime_administration
+  
   ## supv_core
   - action: download_github
     src: https://github.com/lexinor/supv_core
