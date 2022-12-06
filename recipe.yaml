@@ -59,6 +59,9 @@ tasks:
     ref: main
     subpath: "[esx_addons]"
     dest: ./resources/[esx_addons]
+  
+  - action: query_database
+    file: ./resources/[esx_addons]/esx_banking/banking.sql
 
   ## cleanup not used ESX
   - action: remove_path
