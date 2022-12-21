@@ -230,7 +230,7 @@ tasks:
 
   ## ox_fuel
   - action: download_github
-    src: https://github.com/overextended/ox_fuel
+    src: https://github.com/lexinor/ox_fuel
     ref: main
     dest: ./resources/[ox]/ox_fuel
 
@@ -279,11 +279,11 @@ tasks:
   - action: download_github
     src: https://github.com/lexinor/bulletin
     ref: main
-    dest: ./tmp/bulletin
-
-  - action: copy_path
-    src: ./tmp/bulletin/bulletin
     dest: ./resources/[libraries]/bulletin
+
+  ##- action: copy_path
+  ##  src: ./tmp/bulletin/bulletin
+  ##  dest: ./resources/[libraries]/bulletin
 
   ## rprogress
   - action: download_github
