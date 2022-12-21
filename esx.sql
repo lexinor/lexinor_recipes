@@ -419,14 +419,14 @@ CREATE TABLE `cardealer_vehicles` (
 );
 
 CREATE TABLE `vehicle_sold` (
-	`client` VARCHAR(50) NOT NULL,
-	`model` VARCHAR(50) NOT NULL,
-	`plate` VARCHAR(50) NOT NULL,
-	`soldby` VARCHAR(50) NOT NULL,
-	`date` VARCHAR(50) NOT NULL,
-
-	PRIMARY KEY (`plate`)
-);
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `client` varchar(50) NOT NULL,
+  `model` varchar(50) NOT NULL,
+  `plate` varchar(50) NOT NULL,
+  `soldby` varchar(50) NOT NULL,
+  `date` varchar(50) NOT NULL,
+   PRIMARY KEY (`id`)
+) ENGINE=InnoDB;
 
 CREATE TABLE `rented_vehicles` (
 	`vehicle` VARCHAR(60) NOT NULL,
@@ -450,6 +450,7 @@ INSERT INTO `vehicle_categories` (name, label) VALUES
 	('compacts', 'Compacts'),
 	('coupes', 'Coupes'),
 	('cycles', 'Cycles'),
+	('emergency', 'Emergency'),
 	('import', 'Import'),
 	('motorcycles', 'Motos'),
 	('muscle', 'Muscle'),
@@ -471,6 +472,25 @@ CREATE TABLE `vehicles` (
 ) ENGINE=InnoDB;
 
 INSERT INTO `vehicles` (name, model, price, category) VALUES
+('FBI', 'fbi', 0, 'emergency'),
+('FBI2', 'fbi2', 0, 'emergency'),
+('Ambulance', 'ambulance', 0, 'emergency'),
+('Firetruck', 'firetruk', 0, 'emergency'),
+('Lifeguard', 'lguard', 0, 'emergency'),
+('Police Bus', 'pbus', 0, 'emergency'),
+('Police', 'police', 0, 'emergency'),
+('Police 2', 'police2', 0, 'emergency'),
+('Police 3', 'police3', 0, 'emergency'),
+('Police 4', 'police4', 0, 'emergency'),
+('Police Bike', 'policeb', 0, 'emergency'),
+('Police Old 1', 'policeold1', 0, 'emergency'),
+('Police Old 2', 'policeold2', 0, 'emergency'),
+('Policet', 'policet', 0, 'emergency'),
+('PRanger', 'pranger', 0, 'emergency'),
+('Riot', 'riot', 0, 'emergency'),
+('Riot 2', 'riot2', 0, 'emergency'),
+('Sheriff', 'sheriff', 0, 'emergency'),
+('Sheriff 2', 'sheriff2', 0, 'emergency'),
 ('Adder', 'adder', 365000, 'super'),
 ('Akuma', 'akuma', 21000, 'motorcycles'),
 ('Alpha', 'alpha', 30000, 'sports'),
@@ -552,7 +572,6 @@ INSERT INTO `vehicles` (name, model, price, category) VALUES
 ('Coquette Classic', 'coquette2', 45000, 'sportsclassics'),
 ('Coquette BlackFin', 'coquette3', 42000, 'muscle'),
 ('Coquette Supra', 'coquette4', 320000, 'sports'),
-('Honda CR 250', 'cr250', 25000, 'import'),
 ('Cruiser', 'cruiser', 250, 'cycles'),
 ('Cyclone', 'cyclone', 325000, 'super'),
 ('Cypher', 'cypher', 40000, 'sports'),
@@ -882,7 +901,6 @@ INSERT INTO `vehicles` (name, model, price, category) VALUES
 ('Windsor Drop', 'windsor2', 61000, 'coupes'),
 ('Winky', 'winky', 45000, 'offroad'),
 ('Woflsbane', 'wolfsbane', 11200, 'motorcycles'),
-('BMW X6M F16', 'x6m', 65000, 'import'),
 ('XA21', 'xa21', 380000, 'super'),
 ('XLS', 'xls', 35000, 'suvs'),
 ('Yosemite', 'yosemite', 24500, 'muscle'),

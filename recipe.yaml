@@ -2,7 +2,7 @@ $engine: 3
 $minFxVersion: 5104
 $onesync: on
 name: newdawn_recipe
-version: 1.8.0
+version: 0.6.0
 author: Lexinor
 description: New Dawn RP
 
@@ -27,7 +27,7 @@ tasks:
     src: ./tmp/recipe/inventory.cfg
     dest: ./inventory.cfg
 
-    - action: move_path
+  - action: move_path
     src: ./tmp/recipe/ox_target.cfg
     dest: ./ox_target.cfg
   
@@ -59,6 +59,9 @@ tasks:
     ref: main
     subpath: "[esx_addons]"
     dest: ./resources/[esx_addons]
+  
+  - action: query_database
+    file: ./resources/[esx_addons]/esx_banking/banking.sql
 
   ## cleanup not used ESX
   - action: remove_path
@@ -89,8 +92,8 @@ tasks:
     path: ./resources/[esx_addons]/esx_multicharacter
   - action: remove_path
     path: ./resources/[esx]/esx_multicharacter
-  - action: remove_path
-    path: ./resources/[esx_addons]/esx_banking
+  # - action: remove_path
+  #   path: ./resources/[esx_addons]/esx_banking
   - action: remove_path
     path: ./resources/[esx_addons]/esx_drugs
   - action: remove_path
@@ -99,6 +102,8 @@ tasks:
     path: ./resources/[esx]/esx_loadingscreen
   - action: remove_path
     path: ./resources/[esx_addons]/esx_allowlist
+  - action: remove_path
+    path: ./resources/[esx_addons]/esx_garage
 
   ## ox_lib
   - action: download_file
@@ -127,9 +132,9 @@ tasks:
   - action: remove_path
     path: ./resources/ox_inventory/data/items.lua
 
-  - action: move_path
-    src: ./tmp/recipe/ox_inventory_data/items.lua
-    dest: ./resources/ox_inventory/data/items.lua
+  - action: download_file
+    url: https://raw.githubusercontent.com/NewDawn-RP/ox_inventory/main/data/items.lua
+    path: ./resources/ox_inventory/data/items.lua
 
   ## fivem-appearance
   - action: download_github
@@ -148,12 +153,10 @@ tasks:
   - action: query_database
     file: ./resources/npwd/import.sql
 
-  - action: remove_path
-    path: ./resources/npwd/config.json
-
   - action: move_path
     src: ./tmp/recipe/npwdconfig.json
     dest: ./resources/npwd/config.json
+    overwrite: true
 
   ## esx-npwd
   - action: download_github
@@ -162,27 +165,27 @@ tasks:
     dest: ./resources/[voice]/esx-npwd
 
   ## pefcl
-  - action: download_file
-    url: https://github.com/project-error/pefcl/releases/latest/download/pefcl.zip
-    path: ./tmp/pefcl.zip
-  - action: unzip
-    src: ./tmp/pefcl.zip
-    dest: ./resources/
-  - action: query_database
-    file: ./resources/pefcl/import.sql
+  # - action: download_file
+  #   ##url: https://github.com/project-error/pefcl/releases/latest/download/pefcl.zip
+  #   url: https://github.com/lexinor/pefcl/releases/download/unstable-main/pefcl-pre-6c9aa49.zip
+  #   path: ./tmp/pefcl.zip
 
-  - action: remove_path
-    path: ./resources/pefcl/config.json
+  # - action: unzip
+  #   src: ./tmp/pefcl.zip
+  #   dest: ./resources/
+  # - action: query_database
+  #   file: ./resources/pefcl/import.sql
 
-  - action: move_path
-    src: ./tmp/recipe/pefclconfig.json
-    dest: ./resources/pefcl/config.json
+  # - action: move_path
+  #   src: ./tmp/recipe/pefclconfig.json
+  #   dest: ./resources/pefcl/config.json
+  #   overwrite: true
 
-  ## pefcl-esx
-  - action: download_github
-    src: https://github.com/lexinor/pefcl-esx
-    ref: main
-    dest: ./resources/pefcl-esx
+  # ## pefcl-esx
+  # - action: download_github
+  #   src: https://github.com/lexinor/pefcl-esx
+  #   ref: main
+  #   dest: ./resources/pefcl-esx
 
   ## pma-voice
   - action: download_github
@@ -227,7 +230,7 @@ tasks:
 
   ## ox_fuel
   - action: download_github
-    src: https://github.com/overextended/ox_fuel
+    src: https://github.com/lexinor/ox_fuel
     ref: main
     dest: ./resources/[ox]/ox_fuel
 
@@ -244,21 +247,21 @@ tasks:
     src: ./tmp/ox_doorlock/ox_doorlock
     dest: ./resources/[ox]/ox_doorlock
 
-  ## PolyZone
-  - action: download_file
-    url: https://github.com/mkafrin/PolyZone/releases/latest/download/PolyZone.zip
-    path: ./tmp/PolyZone.zip
-  - action: unzip
-    src: ./tmp/PolyZone.zip
-    dest: ./resources/[libraries]/PolyZone    
+  # ## PolyZone
+  # - action: download_file
+  #   url: https://github.com/mkafrin/PolyZone/releases/latest/download/PolyZone.zip
+  #   path: ./tmp/PolyZone.zip
+  # - action: unzip
+  #   src: ./tmp/PolyZone.zip
+  #   dest: ./resources/[libraries]/PolyZone    
 
-  ## MenuV
-  - action: download_file
-    url: https://github.com/lexinor/menuv/releases/latest/download/menuv.zip
-    path: ./tmp/menuv.zip
-  - action: unzip
-    src: ./tmp/menuv.zip
-    dest: ./resources/[libraries]/menuv
+  # ## MenuV
+  # - action: download_file
+  #   url: https://github.com/lexinor/menuv/releases/latest/download/menuv.zip
+  #   path: ./tmp/menuv.zip
+  # - action: unzip
+  #   src: ./tmp/menuv.zip
+  #   dest: ./resources/[libraries]/menuv
 
   ## xsound
   - action: download_github
@@ -276,11 +279,11 @@ tasks:
   - action: download_github
     src: https://github.com/lexinor/bulletin
     ref: main
-    dest: ./tmp/bulletin
-
-  - action: copy_path
-    src: ./tmp/bulletin/bulletin
     dest: ./resources/[libraries]/bulletin
+
+  ##- action: copy_path
+  ##  src: ./tmp/bulletin/bulletin
+  ##  dest: ./resources/[libraries]/bulletin
 
   ## rprogress
   - action: download_github
@@ -296,17 +299,47 @@ tasks:
   - action: query_database
     file: /resources/[general_scripts]/lexinor_dpemotes/dpkeybinds.sql
 
-  ## skill-bar
+  ## sublime_administration
   - action: download_github
-    src: https://github.com/lexinor/skill-bar
+    src: https://github.com/lexinor/sublime_administration
     ref: main
-    dest: ./resources/[libraries]/skill-bar 
-
+    dest: ./resources/[admin]/sublime_administration
+  
   ## supv_core
   - action: download_github
     src: https://github.com/lexinor/supv_core
     ref: main
     dest: ./resources/[libraries]/supv_core
+
+  - action: download_github
+    src: https://github.com/lexinor/utk_render
+    ref: main
+    dest: ./resources/[libraries]/utk_render
+
+  - action: download_github
+    src: https://github.com/lexinor/cd_easytime
+    ref: main
+    dest: ./resources/[general_scripts]/cd_easytime
+
+  - action: download_github
+    src: https://github.com/lexinor/animviewer
+    ref: master
+    dest: ./resources/[dev]/animviewer
+
+  - action: download_github
+    src: https://github.com/lexinor/wasabi_mining
+    ref: main
+    dest: ./resources/[jobs]/wasabi_mining
+
+  - action: download_github
+    src: https://github.com/lexinor/wasabi_fishing
+    ref: main
+    dest: ./resources/[jobs]/wasabi_fishing
+
+  - action: download_github
+    src: https://github.com/lexinor/jsfour-idcard
+    ref: master
+    dest: ./resources/[general_scripts]/jsfour-idcard
 
   ## Final removals
   - action: remove_path
