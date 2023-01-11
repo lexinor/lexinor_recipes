@@ -304,6 +304,9 @@ tasks:
     src: https://github.com/lexinor/sublime_administration
     ref: main
     dest: ./resources/[admin]/sublime_administration
+
+  - action: query_database
+    file: ./resources/[admin]/sublime_administration/db-Sublime.sql
   
   ## supv_core
   - action: download_github
