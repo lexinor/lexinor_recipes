@@ -104,6 +104,10 @@ tasks:
     path: ./resources/[esx_addons]/esx_allowlist
   - action: remove_path
     path: ./resources/[esx_addons]/esx_garage
+  - action: remove_path
+    path: ./resources/[esx_addons]/esx_vehicleshop
+  - action: remove_path
+    path: ./resources/[esx_addons]/esx_boat
 
   ## ox_lib
   - action: download_file
