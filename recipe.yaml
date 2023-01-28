@@ -1,5 +1,5 @@
 $engine: 3
-$minFxVersion: 5104
+$minFxVersion: 6230
 $onesync: on
 name: newdawn_recipe
 version: 0.6.0
@@ -49,13 +49,6 @@ tasks:
 
 # Download basic resources and ESX dependencies
 
-  - action: connect_database
-
-  - action: download_github
-    src: https://github.com/lexinor/bob74_ipl
-    ref: master
-    dest: ./resources/[standalone]/bob74_ipl
-
   - action: download_github
     src: https://github.com/lexinor/esx-core
     ref: main
@@ -86,21 +79,10 @@ tasks:
     ref: main
     dest: ./tmp/addons/esx_basicneeds
 
-  - action: download_file
-    path: ./tmp/files/esx_hud.zip
-    url: https://github.com/esx-framework/esx_hud/releases/latest/download/esx_hud.zip
-
-  - action: unzip
-    dest: ./tmp/addons/esx_hud
-    src: ./tmp/files/esx_hud.zip
-
   - action: download_github
     src: https://github.com/esx-framework/esx_optionalneeds
     ref: main
     dest: ./tmp/addons/esx_optionalneeds
-
-  - action: waste_time # prevent github throttling
-    seconds: 5
 
   - action: download_github
     src: https://github.com/lexinor/esx_property
@@ -164,11 +146,6 @@ tasks:
     src: https://github.com/esx-framework/esx_jobs
     ref: main
     dest: ./tmp/addons/esx_jobs
-
-  - action: download_github
-    src: https://github.com/esx-framework/esx_mechanicjob
-    ref: main
-    dest: ./tmp/addons/esx_mechanicjob
 
   - action: download_github
     src: https://github.com/esx-framework/esx_status
