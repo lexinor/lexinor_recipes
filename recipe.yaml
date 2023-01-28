@@ -126,6 +126,9 @@ tasks:
     src: https://github.com/esx-framework/esx_banking
     ref: main
     dest: ./tmp/addons/esx_banking
+  
+  - action: query_database
+    file: ./tmp/addons/esx_banking/banking.sql
 
   - action: download_github
     src: https://github.com/esx-framework/esx_lscustom
