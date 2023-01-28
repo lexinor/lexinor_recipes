@@ -106,23 +106,13 @@ CREATE TABLE `jobs` (
 INSERT INTO `jobs` (name, label, whitelisted) VALUES
 	('unemployed', 'Unemployed', b'0'),
 	('ambulance', 'EMS', b'0'),
-	('fire', 'Fire Dept.', b'0'),
 	('mechanic', 'Mecanicien', b'0'),
-	('police', 'LSPD', b'1'),
-	('bcso', 'BCSO', b'1'),
+	('police', 'SAPD', b'1'),
 	('taxi', 'Taxi', b'0'),
 	('cardealer', 'Concessionnaire', b'1'),
 	('banker', 'Banquier', b'1'),
 	('realestateagent', 'Realtor', b'1')
 ;
-
-CREATE TABLE `multicharacter_slots` (
-	`identifier` VARCHAR(60) NOT NULL,
-	`slots` INT(11) NOT NULL,
-
-	PRIMARY KEY (`identifier`) USING BTREE,
-	INDEX `slots` (`slots`) USING BTREE
-);
 
 CREATE TABLE `owned_vehicles` (
 	`owner` VARCHAR(60) NOT NULL,
