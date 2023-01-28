@@ -54,6 +54,9 @@ tasks:
     ref: main
     dest: ./tmp/core
 
+  - action: remove_path
+    path: ./tmp/core/esx_loadingscreen
+
   - action: download_github
     src: https://github.com/esx-framework/esx_addonaccount
     ref: main
