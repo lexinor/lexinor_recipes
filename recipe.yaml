@@ -57,6 +57,12 @@ tasks:
   - action: remove_path
     path: ./tmp/core/esx_loadingscreen
 
+  - action: remove_path
+    path: ./tmp/core/esx_multicharacter
+
+  - action: remove_path
+    path: ./tmp/core/skinchanger
+
   - action: download_github
     src: https://github.com/esx-framework/esx_addonaccount
     ref: main
