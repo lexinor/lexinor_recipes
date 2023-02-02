@@ -413,11 +413,6 @@ tasks:
     ref: main
     dest: ./resources/[general_scripts]/scully_emotemenu
 
-  - action: download_github
-    src: https://github.com/lexinor/lexinor_jobtemplate
-    ref: master
-    dest: ./resources/[notused]/lexinor_jobtemplate
-
   ## Final removals
   - action: remove_path
     path: ./tmp
