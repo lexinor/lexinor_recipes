@@ -54,15 +54,6 @@ tasks:
     ref: main
     dest: ./tmp/core
 
-  - action: remove_path
-    path: ./tmp/core/esx_loadingscreen
-
-  - action: remove_path
-    path: ./tmp/core/esx_multicharacter
-
-  - action: remove_path
-    path: ./tmp/core/skinchanger
-
   - action: download_github
     src: https://github.com/esx-framework/esx_addonaccount
     ref: main
@@ -176,6 +167,18 @@ tasks:
   - action: move_path
     src: ./tmp/addons/
     dest: ./resources/[esx_addons]
+
+  - action: remove_path
+    path: ./resources/[esx]/esx_loadingscreen
+
+  - action: remove_path
+    path: ./resources/[esx]/esx_multicharacter
+
+  - action: remove_path
+    path: ./resources/[esx]/skinchanger
+
+  - action: remove_path
+    path: ./resources/[esx]/esx_example
 
   ## ox_lib
   - action: download_file
