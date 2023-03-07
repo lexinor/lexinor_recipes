@@ -416,6 +416,11 @@ tasks:
     ref: main
     dest: ./resources/[general_scripts]/scully_emotemenu
 
+  - action: download_github
+    src: https://github.com/lexinor/flatbed_script
+    ref: main
+    dest: ./resources/[jobs]/[job-utils]/flatbed_script
+
   ## Final removals
   - action: remove_path
     path: ./tmp
