@@ -2,7 +2,7 @@ $engine: 3
 $minFxVersion: 6230
 $onesync: on
 name: newdawn_recipe
-version: 0.6.0
+version: 0.6.1
 author: Lexinor
 description: New Dawn RP
 
@@ -196,26 +196,34 @@ tasks:
     src: ./tmp/oxmysql.zip
     dest: ./resources
 
-  ## ox_inventory
+  ## ox_inventory new dawn fork
   - action: download_file
-    url: https://github.com/overextended/ox_inventory/releases/latest/download/ox_inventory.zip
+    url: https://github.com/NewDawn-RP/ox_inventory/releases/download/latest/ox_inventory.zip
     path: ./tmp/ox_inventory.zip
   - action: unzip
     src: ./tmp/ox_inventory.zip
     dest: ./resources
 
-  - action: remove_path
-    path: ./resources/ox_inventory/data/items.lua
+  ## ox_inventory 
+  #- action: download_file
+  #  url: https://github.com/overextended/ox_inventory/releases/latest/download/ox_inventory.zip
+  #  path: ./tmp/ox_inventory.zip
+  #- action: unzip
+  #  src: ./tmp/ox_inventory.zip
+  #  dest: ./resources
+#
+  #- action: remove_path
+  #  path: ./resources/ox_inventory/data/items.lua
+#
+  #- action: download_file
+  #  url: https://raw.githubusercontent.com/NewDawn-RP/ox_inventory/main/data/items.lua
+  #  path: ./resources/ox_inventory/data/items.lua
 
-  - action: download_file
-    url: https://raw.githubusercontent.com/NewDawn-RP/ox_inventory/main/data/items.lua
-    path: ./resources/ox_inventory/data/items.lua
-
-  ## fivem-appearance
+  ## illenium-appearance
   - action: download_github
-    src: https://github.com/lexinor/fivem-appearance
+    src: https://github.com/lexinor/illenium-appearance
     ref: main
-    dest: ./resources/[ox]/fivem-appearance
+    dest: ./resources/illenium-appearance
 
   ## npwd
   - action: download_file
@@ -328,15 +336,6 @@ tasks:
   #   path: ./tmp/PolyZone.zip
   # - action: unzip
   #   src: ./tmp/PolyZone.zip
-  #   dest: ./resources/[libraries]/PolyZone    
-
-  # ## MenuV
-  # - action: download_file
-  #   url: https://github.com/lexinor/menuv/releases/latest/download/menuv.zip
-  #   path: ./tmp/menuv.zip
-  # - action: unzip
-  #   src: ./tmp/menuv.zip
-  #   dest: ./resources/[libraries]/menuv
 
   ## xsound
   - action: download_github
