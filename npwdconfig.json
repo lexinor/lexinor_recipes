@@ -71,7 +71,6 @@
       "sentryEnabled": true
     },
     "apps": [
-      "pefcl"
     ],
     "voiceMessage": {
       "enabled": false,
