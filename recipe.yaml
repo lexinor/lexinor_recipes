@@ -90,24 +90,19 @@ tasks:
     dest: ./tmp/addons/esx_property
 
   - action: download_github
-    src: https://github.com/esx-framework/esx_dmvschool
+    src: https://github.com/lexinor/esx_dmvschool
     ref: main
     dest: ./tmp/addons/esx_dmvschool
 
-  - action: download_github
-    src: https://github.com/esx-framework/esx_barbershop
-    ref: main
-    dest: ./tmp/addons/esx_barbershop
+  # - action: download_github
+  #   src: https://github.com/esx-framework/esx_barbershop
+  #   ref: main
+  #   dest: ./tmp/addons/esx_barbershop
 
   - action: download_github
     src: https://github.com/esx-framework/esx_weaponshop
     ref: main
     dest: ./tmp/addons/esx_weaponshop
-
-  - action: download_github
-    src: https://github.com/esx-framework/esx_taxijob
-    ref: main
-    dest: ./tmp/addons/esx_taxijob
 
   - action: download_github
     src: https://github.com/esx-framework/esx_billing
@@ -128,12 +123,12 @@ tasks:
     file: ./tmp/addons/esx_banking/banking.sql
 
   - action: download_github
-    src: https://github.com/esx-framework/esx_lscustom
+    src: https://github.com/lexinor/esx_lscustom
     ref: main
     dest: ./tmp/addons/esx_lscustom
 
   - action: download_github
-    src: https://github.com/esx-framework/esx_society
+    src: https://github.com/lexinor/esx_society
     ref: main
     dest: ./tmp/addons/esx_society
 
