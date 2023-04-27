@@ -75,7 +75,7 @@ tasks:
     dest: ./tmp/addons/esx_service
 
   - action: download_github
-    src: https://github.com/esx-framework/esx_basicneeds
+    src: https://github.com/lexinor/esx_basicneeds
     ref: main
     dest: ./tmp/addons/esx_basicneeds
 
@@ -94,16 +94,6 @@ tasks:
     ref: main
     dest: ./tmp/addons/esx_dmvschool
 
-  # - action: download_github
-  #   src: https://github.com/esx-framework/esx_barbershop
-  #   ref: main
-  #   dest: ./tmp/addons/esx_barbershop
-
-  - action: download_github
-    src: https://github.com/esx-framework/esx_weaponshop
-    ref: main
-    dest: ./tmp/addons/esx_weaponshop
-
   - action: download_github
     src: https://github.com/esx-framework/esx_billing
     ref: main
@@ -115,7 +105,7 @@ tasks:
     dest: ./tmp/addons/esx_joblisting
 
   - action: download_github
-    src: https://github.com/esx-framework/esx_banking
+    src: https://github.com/lexinor/esx_banking
     ref: main
     dest: ./tmp/addons/esx_banking
   
@@ -139,11 +129,6 @@ tasks:
     src: https://github.com/esx-framework/esx_license
     ref: main
     dest: ./tmp/addons/esx_license
-
-  - action: download_github
-    src: https://github.com/esx-framework/esx_jobs
-    ref: main
-    dest: ./tmp/addons/esx_jobs
 
   - action: download_github
     src: https://github.com/esx-framework/esx_status
@@ -198,21 +183,6 @@ tasks:
   - action: unzip
     src: ./tmp/ox_inventory.zip
     dest: ./resources
-
-  ## ox_inventory 
-  #- action: download_file
-  #  url: https://github.com/overextended/ox_inventory/releases/latest/download/ox_inventory.zip
-  #  path: ./tmp/ox_inventory.zip
-  #- action: unzip
-  #  src: ./tmp/ox_inventory.zip
-  #  dest: ./resources
-#
-  #- action: remove_path
-  #  path: ./resources/ox_inventory/data/items.lua
-#
-  #- action: download_file
-  #  url: https://raw.githubusercontent.com/NewDawn-RP/ox_inventory/main/data/items.lua
-  #  path: ./resources/ox_inventory/data/items.lua
 
   ## illenium-appearance
   - action: download_github
@@ -314,7 +284,7 @@ tasks:
 
   ## ox_doorlock
   - action: download_file
-    url: https://github.com/overextended/ox_doorlock/releases/latest/download/ox_doorlock.zip
+    url: https://github.com/lexinor/ox_doorlock/releases/latest/download/ox_doorlock.zip
     path: ./tmp/ox_doorlock.zip
 
   - action: unzip
@@ -379,11 +349,26 @@ tasks:
     src: https://github.com/lexinor/utk_render
     ref: main
     dest: ./resources/[libraries]/utk_render
+    
+  - action: download_github
+    src: https://github.com/lexinor/pd-safe
+    ref: master
+    dest: ./resources/[libraries]/pd-safe
+    
+  - action: download_github
+    src:  https://github.com/lexinor/mhacking
+    ref: main
+    dest: ./resources/[libraries]/mhacking
 
   - action: download_github
     src: https://github.com/lexinor/cd_easytime
     ref: main
     dest: ./resources/[general_scripts]/cd_easytime
+
+ - action: download_github
+    src: https://github.com/lexinor/vehiclefailure
+    ref: main
+    dest: ./resources/[general_scripts]/vehiclefailure  
 
   - action: download_github
     src: https://github.com/lexinor/animviewer
@@ -399,11 +384,16 @@ tasks:
     src: https://github.com/lexinor/wasabi_fishing
     ref: main
     dest: ./resources/[jobs]/wasabi_fishing
-
+    
   - action: download_github
-    src: https://github.com/lexinor/jsfour-idcard
-    ref: master
-    dest: ./resources/[general_scripts]/jsfour-idcard
+    src: https://github.com/lexinor/pickle_farming
+    ref: main
+    dest: ./resources/[jobs]/pickle_farming
+    
+  - action: download_github
+    src: https://github.com/lexinor/pickle_rental
+    ref: main
+    dest: ./resources/[jobs]/pickle_rental    
 
   - action: download_github
     src: https://github.com/lexinor/scully_emotemenu
@@ -414,6 +404,11 @@ tasks:
     src: https://github.com/lexinor/flatbed_script
     ref: main
     dest: ./resources/[jobs]/[job-utils]/flatbed_script
+    
+  - action: download_github
+    src: https://github.com/lexinor/taximeter
+    ref: main
+    dest: ./resources/[jobs]/[job-utils]/taximeter
 
   ## Final removals
   - action: remove_path
