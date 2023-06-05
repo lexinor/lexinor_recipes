@@ -199,21 +199,6 @@ tasks:
     src: ./tmp/ox_inventory.zip
     dest: ./resources
 
-  ## ox_inventory 
-  #- action: download_file
-  #  url: https://github.com/overextended/ox_inventory/releases/latest/download/ox_inventory.zip
-  #  path: ./tmp/ox_inventory.zip
-  #- action: unzip
-  #  src: ./tmp/ox_inventory.zip
-  #  dest: ./resources
-#
-  #- action: remove_path
-  #  path: ./resources/ox_inventory/data/items.lua
-#
-  #- action: download_file
-  #  url: https://raw.githubusercontent.com/NewDawn-RP/ox_inventory/main/data/items.lua
-  #  path: ./resources/ox_inventory/data/items.lua
-
   ## illenium-appearance
   - action: download_github
     src: https://github.com/lexinor/illenium-appearance
@@ -314,7 +299,7 @@ tasks:
 
   ## ox_doorlock
   - action: download_file
-    url: https://github.com/overextended/ox_doorlock/releases/latest/download/ox_doorlock.zip
+    url: https://github.com/lexinor/ox_doorlock/releases/latest/download/ox_doorlock.zip
     path: ./tmp/ox_doorlock.zip
 
   - action: unzip
