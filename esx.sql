@@ -16,6 +16,7 @@ CREATE TABLE `users` (
 	`faction` varchar(30) COLLATE utf8mb4_bin DEFAULT 'nofaction',
 	`faction_grade` int(11) DEFAULT 0,
 	`loadout` LONGTEXT NULL DEFAULT NULL,
+	`metadata` LONGTEXT NULL DEFAULT NULL,
 	`position` VARCHAR(255) NOT NULL DEFAULT '{"x":-1042.9266,"y":-2746.4329,"z":21.3594,"heading":326.3846}',
 	`firstname` VARCHAR(16) NULL DEFAULT NULL,
 	`lastname` VARCHAR(16) NULL DEFAULT NULL,
