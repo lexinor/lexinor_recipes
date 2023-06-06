@@ -190,28 +190,6 @@ tasks:
     ref: main
     dest: ./resources/illenium-appearance
 
-  ## npwd
-  - action: download_file
-    url: https://github.com/project-error/npwd/releases/latest/download/npwd.zip
-    path: ./tmp/npwd.zip
-  - action: unzip
-    src: ./tmp/npwd.zip
-    dest: ./resources/
-
-  - action: query_database
-    file: ./resources/npwd/import.sql
-
-  - action: move_path
-    src: ./tmp/recipe/npwdconfig.json
-    dest: ./resources/npwd/config.json
-    overwrite: true
-
-  ## esx-npwd
-  - action: download_github
-    src: https://github.com/overextended/esx-npwd
-    ref: main
-    dest: ./resources/[voice]/esx-npwd
-
   ## pefcl
   # - action: download_file
   #   ##url: https://github.com/project-error/pefcl/releases/latest/download/pefcl.zip

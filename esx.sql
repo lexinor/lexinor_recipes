@@ -150,7 +150,10 @@ INSERT INTO `licenses` (`type`, `label`) VALUES
 	('drive_bike', 'Permis Moto'),
 	('drive_truck', 'Permis Poids Lourds'),
 	('flight', 'Licence de vol'),
-	('boat', 'Permis Bateau');
+	('boat', 'Permis Bateau'),
+	('weapon_a', 'Catégorie A'),
+	('weapon_b', 'Catégorie B'),
+	('weapon_c', 'Catégorie C');
 
 CREATE TABLE `user_licenses` (
 	`id` INT NOT NULL AUTO_INCREMENT,
